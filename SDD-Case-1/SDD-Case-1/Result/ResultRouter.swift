@@ -23,14 +23,11 @@ class ResultRouter: ResultRouterProtocol {
         return view
     }
     
-//    func navigateToSuccessPage(from view: ResultViewProtocol?) {
-//        
-////        guard let sourceView = view as? UIViewController else { return }
-////        let qrScanModule = QRScanRouter.createModule()
-////        sourceView.navigationController?.pushViewController(qrScanModule, animated: true)
-//    }
     func navigateToSuccess(from view: ResultViewProtocol?) {
         print("Success")
+        guard let sourceView = view as? UIViewController else { return }
+        let resultModule = SuccessRouter.createModule()
+        sourceView.navigationController?.pushViewController(resultModule, animated: true)
     }
 }
 
