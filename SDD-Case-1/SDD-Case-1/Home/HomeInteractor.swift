@@ -8,5 +8,9 @@
 import Foundation
 
 class HomeInteractor: HomeInteractorProtocol {
+    var coreDataManager: CoreDataManagerProtocol?
     
+    func fetchTransactionHistory() -> [Transaction] {
+        return coreDataManager?.fetchTransactionHistory() ?? []
+    }
 }

@@ -10,10 +10,12 @@ import UIKit
 protocol HomeViewProtocol: AnyObject {
     var presenter: HomePresenterProtocol? { get set }
     func displayCurrentBalance(_ value: Int?)
+    func displayTransactionHistory(_ transactions: [Transaction])
 }
 
 protocol HomeInteractorProtocol: AnyObject {
-    
+    var coreDataManager: CoreDataManagerProtocol? { get set }
+    func fetchTransactionHistory() -> [Transaction]
 }
 
 protocol HomePresenterProtocol: AnyObject {
@@ -24,9 +26,11 @@ protocol HomePresenterProtocol: AnyObject {
     func showQRScan()
     func topUpBalance()
     func checkUserDefaultsKey()
+    func fetchTransactionHistory()
 }
 
 protocol HomeRouterProtocol: AnyObject {
     static func createModule() -> UIViewController
     func navigateToQRScan(from view: HomeViewProtocol?)
+    func navigateToHistory(from view: HomeViewProtocol?)
 }

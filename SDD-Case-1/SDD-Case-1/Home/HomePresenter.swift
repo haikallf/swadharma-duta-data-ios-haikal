@@ -35,4 +35,9 @@ class HomePresenter: HomePresenterProtocol {
         UserDefaults.standard.setValue(balance, forKey: "balance")
         view?.displayCurrentBalance(balance)
     }
+    
+    func fetchTransactionHistory() {
+        let transactions = interactor?.fetchTransactionHistory()
+        view?.displayTransactionHistory(transactions ?? [])
+    }
 }

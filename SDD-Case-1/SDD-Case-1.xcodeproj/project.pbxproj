@@ -17,6 +17,12 @@
 		C5692DFF2B337C1A000D9F76 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692DFD2B337C1A000D9F76 /* Transaction+CoreDataClass.swift */; };
 		C5692E002B337C1A000D9F76 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692DFE2B337C1A000D9F76 /* Transaction+CoreDataProperties.swift */; };
 		C5692E032B337F70000D9F76 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692E022B337F6F000D9F76 /* CoreDataManager.swift */; };
+		C5692E062B3398A6000D9F76 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692E052B3398A6000D9F76 /* HistoryViewController.swift */; };
+		C5692E082B3398BB000D9F76 /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692E072B3398BB000D9F76 /* HistoryInteractor.swift */; };
+		C5692E0A2B3398E9000D9F76 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692E092B3398E9000D9F76 /* HistoryPresenter.swift */; };
+		C5692E0C2B3398F3000D9F76 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692E0B2B3398F3000D9F76 /* HistoryEntity.swift */; };
+		C5692E0E2B3398FB000D9F76 /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692E0D2B3398FB000D9F76 /* HistoryRouter.swift */; };
+		C5692E102B3399B9000D9F76 /* HistoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5692E0F2B3399B9000D9F76 /* HistoryProtocols.swift */; };
 		C5A4CC582B31C54700B467D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A4CC572B31C54700B467D7 /* AppDelegate.swift */; };
 		C5A4CC5A2B31C54700B467D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A4CC592B31C54700B467D7 /* SceneDelegate.swift */; };
 		C5A4CC5C2B31C54700B467D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A4CC5B2B31C54700B467D7 /* ViewController.swift */; };
@@ -54,6 +60,12 @@
 		C5692DFD2B337C1A000D9F76 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C5692DFE2B337C1A000D9F76 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C5692E022B337F6F000D9F76 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C5692E052B3398A6000D9F76 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		C5692E072B3398BB000D9F76 /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		C5692E092B3398E9000D9F76 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		C5692E0B2B3398F3000D9F76 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
+		C5692E0D2B3398FB000D9F76 /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		C5692E0F2B3399B9000D9F76 /* HistoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryProtocols.swift; sourceTree = "<group>"; };
 		C5A4CC542B31C54700B467D7 /* SDD-Case-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDD-Case-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A4CC572B31C54700B467D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5A4CC592B31C54700B467D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +136,19 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		C5692E042B33983B000D9F76 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C5692E052B3398A6000D9F76 /* HistoryViewController.swift */,
+				C5692E072B3398BB000D9F76 /* HistoryInteractor.swift */,
+				C5692E092B3398E9000D9F76 /* HistoryPresenter.swift */,
+				C5692E0B2B3398F3000D9F76 /* HistoryEntity.swift */,
+				C5692E0D2B3398FB000D9F76 /* HistoryRouter.swift */,
+				C5692E0F2B3399B9000D9F76 /* HistoryProtocols.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		C5A4CC4B2B31C54700B467D7 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +168,7 @@
 		C5A4CC562B31C54700B467D7 /* SDD-Case-1 */ = {
 			isa = PBXGroup;
 			children = (
+				C5692E042B33983B000D9F76 /* History */,
 				C5692E012B337F60000D9F76 /* CoreData */,
 				C5692DF92B33788B000D9F76 /* Entities */,
 				C5B9C5C62B3279D500E4889B /* Helper */,
@@ -282,9 +308,11 @@
 				C5B9C5C82B3279DD00E4889B /* UIView.swift in Sources */,
 				C5B9C5B22B326AC600E4889B /* QRScanPresenter.swift in Sources */,
 				C5B9C5B82B326B2B00E4889B /* QRScanProtocols.swift in Sources */,
+				C5692E0A2B3398E9000D9F76 /* HistoryPresenter.swift in Sources */,
 				C5B9C5BB2B3272F300E4889B /* ResultViewController.swift in Sources */,
 				C5A4CC5C2B31C54700B467D7 /* ViewController.swift in Sources */,
 				C5692DF82B33717C000D9F76 /* SuccessProtocols.swift in Sources */,
+				C5692E0C2B3398F3000D9F76 /* HistoryEntity.swift in Sources */,
 				C5A4CC582B31C54700B467D7 /* AppDelegate.swift in Sources */,
 				C5AC36BB2B3227490052AE3C /* HomeEntity.swift in Sources */,
 				C5A4CC5A2B31C54700B467D7 /* SceneDelegate.swift in Sources */,
@@ -303,12 +331,16 @@
 				C5692E002B337C1A000D9F76 /* Transaction+CoreDataProperties.swift in Sources */,
 				C5B9C5B02B326ABD00E4889B /* QRScanInteractor.swift in Sources */,
 				C5B9C5C12B32731A00E4889B /* ResultEntity.swift in Sources */,
+				C5692E102B3399B9000D9F76 /* HistoryProtocols.swift in Sources */,
 				C5AC36B52B3227200052AE3C /* HomeViewController.swift in Sources */,
+				C5692E062B3398A6000D9F76 /* HistoryViewController.swift in Sources */,
 				C5692DEE2B3370ED000D9F76 /* SuccessViewController.swift in Sources */,
 				C5692DF22B337106000D9F76 /* SuccessPresenter.swift in Sources */,
 				C5692DF42B337111000D9F76 /* SuccessEntity.swift in Sources */,
 				C5B9C5BF2B32730A00E4889B /* ResultPresenter.swift in Sources */,
+				C5692E0E2B3398FB000D9F76 /* HistoryRouter.swift in Sources */,
 				C5692DFC2B3378E6000D9F76 /* Model.xcdatamodeld in Sources */,
+				C5692E082B3398BB000D9F76 /* HistoryInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
