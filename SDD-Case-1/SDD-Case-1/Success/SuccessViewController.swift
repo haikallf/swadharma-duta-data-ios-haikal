@@ -35,6 +35,7 @@ class SuccessViewController: UIViewController {
     private func configureUI() {
         view.backgroundColor = .white
         view.addSubviews(successLabel, okButton)
+        navigationItem.setHidesBackButton(true, animated: true)
         
         NSLayoutConstraint.activate([
             successLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
