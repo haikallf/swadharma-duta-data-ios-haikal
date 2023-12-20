@@ -9,7 +9,6 @@ import UIKit
 
 class ResultViewController: UIViewController {
     var presenter: ResultPresenterProtocol?
-    var resultValue: String?
     
     lazy var bankName: UILabel = {
         let label = UILabel()
@@ -41,7 +40,7 @@ class ResultViewController: UIViewController {
     
     lazy var payButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Scan", for: .normal)
+        button.setTitle("Pay", for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 12
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +51,7 @@ class ResultViewController: UIViewController {
     @objc
     private func payButtonTapped() {
         guard let money = Int(amount.text ?? "0") else { return }
-        presenter?.pay(for: money)
+        presenter?.pay(id: UUID(uuidString: transactionId.text ?? "") ?? UUID(), bankName: bankName.text ?? "", amount: Int64(amount.text ?? "") ?? 0, merchant: merchantName.text ?? "", isTopUp: false)
     }
     
     override func viewDidLoad() {
@@ -60,12 +59,12 @@ class ResultViewController: UIViewController {
         configureUI()
         presenter?.viewDidLoad()
     }
-
+    
     private func configureUI() {
         view.backgroundColor = .white
         
         view.addSubviews(bankName, transactionId, merchantName, amount, payButton)
-
+        
         NSLayoutConstraint.activate([
             bankName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 300),
             bankName.centerXAnchor.constraint(equalTo: view.centerXAnchor),

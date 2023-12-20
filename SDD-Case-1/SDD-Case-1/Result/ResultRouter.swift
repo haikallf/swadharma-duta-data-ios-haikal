@@ -13,18 +13,19 @@ class ResultRouter: ResultRouterProtocol {
         let interactor = ResultInteractor()
         let presenter = ResultPresenter()
         let router = ResultRouter()
+        let coreDataManager = CoreDataManager(persistentContainer: (UIApplication.shared.delegate as! AppDelegate).persistentContainer)
 
         view.presenter = presenter
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
         presenter.resultValue = resultValue
-
+        
+        interactor.coreDataManager = coreDataManager
         return view
     }
     
     func navigateToSuccess(from view: ResultViewProtocol?) {
-        print("Success")
         guard let sourceView = view as? UIViewController else { return }
         let resultModule = SuccessRouter.createModule()
         sourceView.navigationController?.pushViewController(resultModule, animated: true)

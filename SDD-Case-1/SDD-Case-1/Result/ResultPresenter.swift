@@ -11,22 +11,27 @@ class ResultPresenter: ResultPresenterProtocol {
     weak var view: ResultViewProtocol?
     var interactor: ResultInteractorProtocol?
     var router: ResultRouterProtocol?
-
+    
     var resultValue: String?
-
+    
     func viewDidLoad() {
         view?.displayResultValue(resultValue)
     }
     
-    func pay(for amount: Int) {
+    func pay(id: UUID, bankName: String, amount: Int64, merchant: String, isTopUp: Bool) {
         let balance = UserDefaults.standard.integer(forKey: "balance")
         
         if balance > amount {
-            let currentBalance = balance - amount
+            let currentBalance = Int(Int64(balance) - amount)
             UserDefaults.standard.setValue(currentBalance, forKey: "balance")
+            saveTransaction(id: id, bankName: bankName, amount: amount, merchant: merchant, isTopUp: isTopUp)
             router?.navigateToSuccess(from: view)
         } else {
-            print("Unsufficient balance")
+            print("Insufficient balance")
         }
+    }
+    
+    func saveTransaction(id: UUID, bankName: String, amount: Int64, merchant: String, isTopUp: Bool) {
+        interactor?.saveTransaction(id: id, bankName: bankName, amount: amount, merchant: merchant, isTopUp: isTopUp)
     }
 }

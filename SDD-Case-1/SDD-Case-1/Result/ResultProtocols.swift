@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol ResultViewProtocol: AnyObject {
     var presenter: ResultPresenterProtocol? { get set }
@@ -14,7 +15,9 @@ protocol ResultViewProtocol: AnyObject {
 }
 
 protocol ResultInteractorProtocol: AnyObject {
-    
+    var coreDataManager: CoreDataManagerProtocol? { get set }
+
+    func saveTransaction(id: UUID, bankName: String, amount: Int64, merchant: String, isTopUp: Bool)
 }
 
 protocol ResultPresenterProtocol: AnyObject {
@@ -26,7 +29,9 @@ protocol ResultPresenterProtocol: AnyObject {
 
     func viewDidLoad()
     
-    func pay(for amount: Int)
+    func pay(id: UUID, bankName: String, amount: Int64, merchant: String, isTopUp: Bool)
+    
+    func saveTransaction(id: UUID, bankName: String, amount: Int64, merchant: String, isTopUp: Bool)
 }
 
 protocol ResultRouterProtocol: AnyObject {

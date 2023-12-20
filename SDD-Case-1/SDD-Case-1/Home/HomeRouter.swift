@@ -23,7 +23,6 @@ class HomeRouter: HomeRouterProtocol {
     }
 
     func navigateToQRScan(from view: HomeViewProtocol?) {
-        print("Clicked")
         guard let sourceView = view as? UIViewController else { return }
         let qrScanModule = QRScanRouter.createModule()
         sourceView.navigationController?.pushViewController(qrScanModule, animated: true)
