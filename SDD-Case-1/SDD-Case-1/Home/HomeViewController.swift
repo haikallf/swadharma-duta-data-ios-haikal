@@ -64,5 +64,5 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
-    // Implement methods from the HomeViewProtocol if needed
+    
 }
