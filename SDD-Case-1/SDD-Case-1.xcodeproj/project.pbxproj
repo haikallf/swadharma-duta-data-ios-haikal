@@ -24,6 +24,13 @@
 		C5B9C5B42B326AD200E4889B /* QRScanEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5B32B326AD200E4889B /* QRScanEntity.swift */; };
 		C5B9C5B62B326ADD00E4889B /* QRScanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5B52B326ADD00E4889B /* QRScanRouter.swift */; };
 		C5B9C5B82B326B2B00E4889B /* QRScanProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5B72B326B2B00E4889B /* QRScanProtocols.swift */; };
+		C5B9C5BB2B3272F300E4889B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5BA2B3272F300E4889B /* ResultViewController.swift */; };
+		C5B9C5BD2B3272FE00E4889B /* ResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5BC2B3272FE00E4889B /* ResultInteractor.swift */; };
+		C5B9C5BF2B32730A00E4889B /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5BE2B32730A00E4889B /* ResultPresenter.swift */; };
+		C5B9C5C12B32731A00E4889B /* ResultEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5C02B32731A00E4889B /* ResultEntity.swift */; };
+		C5B9C5C32B32732400E4889B /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5C22B32732400E4889B /* ResultRouter.swift */; };
+		C5B9C5C52B32732D00E4889B /* ResultProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5C42B32732D00E4889B /* ResultProtocols.swift */; };
+		C5B9C5C82B3279DD00E4889B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9C5C72B3279DD00E4889B /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,13 @@
 		C5B9C5B32B326AD200E4889B /* QRScanEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanEntity.swift; sourceTree = "<group>"; };
 		C5B9C5B52B326ADD00E4889B /* QRScanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanRouter.swift; sourceTree = "<group>"; };
 		C5B9C5B72B326B2B00E4889B /* QRScanProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanProtocols.swift; sourceTree = "<group>"; };
+		C5B9C5BA2B3272F300E4889B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		C5B9C5BC2B3272FE00E4889B /* ResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInteractor.swift; sourceTree = "<group>"; };
+		C5B9C5BE2B32730A00E4889B /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		C5B9C5C02B32731A00E4889B /* ResultEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultEntity.swift; sourceTree = "<group>"; };
+		C5B9C5C22B32732400E4889B /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
+		C5B9C5C42B32732D00E4889B /* ResultProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProtocols.swift; sourceTree = "<group>"; };
+		C5B9C5C72B3279DD00E4889B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,8 @@
 		C5A4CC562B31C54700B467D7 /* SDD-Case-1 */ = {
 			isa = PBXGroup;
 			children = (
+				C5B9C5C62B3279D500E4889B /* Helper */,
+				C5B9C5B92B3272D800E4889B /* Result */,
 				C5B9C5AC2B326A9500E4889B /* QRScan */,
 				C5AC36A62B3219860052AE3C /* Home */,
 				C5A4CC572B31C54700B467D7 /* AppDelegate.swift */,
@@ -114,6 +130,27 @@
 				C5B9C5B72B326B2B00E4889B /* QRScanProtocols.swift */,
 			);
 			path = QRScan;
+			sourceTree = "<group>";
+		};
+		C5B9C5B92B3272D800E4889B /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				C5B9C5BA2B3272F300E4889B /* ResultViewController.swift */,
+				C5B9C5BC2B3272FE00E4889B /* ResultInteractor.swift */,
+				C5B9C5BE2B32730A00E4889B /* ResultPresenter.swift */,
+				C5B9C5C02B32731A00E4889B /* ResultEntity.swift */,
+				C5B9C5C22B32732400E4889B /* ResultRouter.swift */,
+				C5B9C5C42B32732D00E4889B /* ResultProtocols.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		C5B9C5C62B3279D500E4889B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C5B9C5C72B3279DD00E4889B /* UIView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,20 +224,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B9C5B62B326ADD00E4889B /* QRScanRouter.swift in Sources */,
+				C5B9C5C32B32732400E4889B /* ResultRouter.swift in Sources */,
+				C5B9C5C82B3279DD00E4889B /* UIView.swift in Sources */,
 				C5B9C5B22B326AC600E4889B /* QRScanPresenter.swift in Sources */,
 				C5B9C5B82B326B2B00E4889B /* QRScanProtocols.swift in Sources */,
+				C5B9C5BB2B3272F300E4889B /* ResultViewController.swift in Sources */,
 				C5A4CC5C2B31C54700B467D7 /* ViewController.swift in Sources */,
 				C5A4CC582B31C54700B467D7 /* AppDelegate.swift in Sources */,
 				C5AC36BB2B3227490052AE3C /* HomeEntity.swift in Sources */,
 				C5A4CC5A2B31C54700B467D7 /* SceneDelegate.swift in Sources */,
 				C5B9C5B42B326AD200E4889B /* QRScanEntity.swift in Sources */,
+				C5B9C5BD2B3272FE00E4889B /* ResultInteractor.swift in Sources */,
 				C5AC36BF2B3227B60052AE3C /* HomeProtocols.swift in Sources */,
 				C5AC36B92B32273E0052AE3C /* HomePresenter.swift in Sources */,
 				C5AC36BD2B32275D0052AE3C /* HomeRouter.swift in Sources */,
 				C5AC36B72B3227320052AE3C /* HomeInteractor.swift in Sources */,
 				C5B9C5AE2B326AB300E4889B /* QRScanViewController.swift in Sources */,
+				C5B9C5C52B32732D00E4889B /* ResultProtocols.swift in Sources */,
 				C5B9C5B02B326ABD00E4889B /* QRScanInteractor.swift in Sources */,
+				C5B9C5C12B32731A00E4889B /* ResultEntity.swift in Sources */,
 				C5AC36B52B3227200052AE3C /* HomeViewController.swift in Sources */,
+				C5B9C5BF2B32730A00E4889B /* ResultPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

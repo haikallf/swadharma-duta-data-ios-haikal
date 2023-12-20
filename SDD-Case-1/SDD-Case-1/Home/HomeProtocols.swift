@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     var presenter: HomePresenterProtocol? { get set }
+    func displayCurrentBalance(_ value: Int?)
 }
 
 protocol HomeInteractorProtocol: AnyObject {
@@ -21,6 +22,8 @@ protocol HomePresenterProtocol: AnyObject {
     var router: HomeRouterProtocol? { get set }
 
     func showQRScan()
+    func topUpBalance()
+    func checkUserDefaultsKey()
 }
 
 protocol HomeRouterProtocol: AnyObject {

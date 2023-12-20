@@ -54,7 +54,7 @@ class QRScanViewController: UIViewController {
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
         
-        DispatchQueue.main.async {
+        DispatchQueue.global(qos: .background).async {
             self.captureSession.startRunning()
         }
     }

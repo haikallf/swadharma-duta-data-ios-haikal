@@ -9,11 +9,11 @@ import UIKit
 
 protocol QRScanViewProtocol: AnyObject {
     var presenter: QRScanPresenterProtocol? { get set }
-    // Define methods or properties for the view if needed
+    
 }
 
 protocol QRScanInteractorProtocol: AnyObject {
-    // Define methods or properties for the interactor if needed
+    
 }
 
 protocol QRScanPresenterProtocol: AnyObject {
@@ -22,12 +22,10 @@ protocol QRScanPresenterProtocol: AnyObject {
     var router: QRScanRouterProtocol? { get set }
 
     func didFindQRCode(value: String)
-    // Define other methods or properties for the presenter if needed
 }
 
 protocol QRScanRouterProtocol: AnyObject {
     static func createModule() -> UIViewController
     func navigateToResult(from view: QRScanViewProtocol?, with qrCodeValue: String)
-    // Define other methods or properties for the router if needed
 }
 

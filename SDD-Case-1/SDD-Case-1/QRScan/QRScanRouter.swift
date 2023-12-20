@@ -24,7 +24,7 @@ class QRScanRouter: QRScanRouterProtocol {
 
     func navigateToResult(from view: QRScanViewProtocol?, with qrCodeValue: String) {
         guard let sourceView = view as? UIViewController else { return }
-//        let resultModule = ResultRouter.createModule(with: qrCodeValue)
-//        sourceView.navigationController?.pushViewController(resultModule, animated: true)
+        let resultModule = ResultRouter.createModule(with: qrCodeValue)
+        sourceView.navigationController?.pushViewController(resultModule, animated: true)
     }
 }

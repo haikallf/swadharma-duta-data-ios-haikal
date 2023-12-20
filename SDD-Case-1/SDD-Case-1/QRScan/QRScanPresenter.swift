@@ -13,7 +13,6 @@ class QRScanPresenter: QRScanPresenterProtocol {
     var router: QRScanRouterProtocol?
 
     func didFindQRCode(value: String) {
-        print("Scanned")
         router?.navigateToResult(from: view, with: value)
     }
 }
