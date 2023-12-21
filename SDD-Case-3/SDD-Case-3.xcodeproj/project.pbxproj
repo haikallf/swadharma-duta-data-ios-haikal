@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8815C964597BD7E6D9544FC /* Pods_SDD_Case_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2883598DC6329B2DB27AF84B /* Pods_SDD_Case_3.framework */; };
 		C59044282B34A8AA0043BD0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044272B34A8AA0043BD0E /* AppDelegate.swift */; };
 		C590442A2B34A8AA0043BD0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044292B34A8AA0043BD0E /* SceneDelegate.swift */; };
 		C59044312B34A8AB0043BD0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59044302B34A8AB0043BD0E /* Assets.xcassets */; };
@@ -18,9 +19,13 @@
 		C59044452B34AAF70043BD0E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044442B34AAF70043BD0E /* HomeRouter.swift */; };
 		C59044472B34AAFE0043BD0E /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044462B34AAFE0043BD0E /* HomeProtocols.swift */; };
 		C590444C2B34BF770043BD0E /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590444B2B34BF770043BD0E /* DonutChartView.swift */; };
+		C590444F2B3501A30043BD0E /* IntToMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590444E2B3501A30043BD0E /* IntToMonth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172978996DCD50CCE3789BE1 /* Pods-SDD-Case-3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDD-Case-3.release.xcconfig"; path = "Target Support Files/Pods-SDD-Case-3/Pods-SDD-Case-3.release.xcconfig"; sourceTree = "<group>"; };
+		2883598DC6329B2DB27AF84B /* Pods_SDD_Case_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDD_Case_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC505BA8891F52B9B88253F /* Pods-SDD-Case-3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDD-Case-3.debug.xcconfig"; path = "Target Support Files/Pods-SDD-Case-3/Pods-SDD-Case-3.debug.xcconfig"; sourceTree = "<group>"; };
 		C59044242B34A8AA0043BD0E /* SDD-Case-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDD-Case-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59044272B34A8AA0043BD0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59044292B34A8AA0043BD0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		C59044442B34AAF70043BD0E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		C59044462B34AAFE0043BD0E /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		C590444B2B34BF770043BD0E /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
+		C590444E2B3501A30043BD0E /* IntToMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntToMonth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8815C964597BD7E6D9544FC /* Pods_SDD_Case_3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADF03AEAF9DB107F6B5E6639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2883598DC6329B2DB27AF84B /* Pods_SDD_Case_3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C590441B2B34A8AA0043BD0E = {
 			isa = PBXGroup;
 			children = (
 				C59044262B34A8AA0043BD0E /* SDD-Case-3 */,
 				C59044252B34A8AA0043BD0E /* Products */,
+				EF33B20D9184D1E172454A9B /* Pods */,
+				ADF03AEAF9DB107F6B5E6639 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +83,7 @@
 		C59044262B34A8AA0043BD0E /* SDD-Case-3 */ = {
 			isa = PBXGroup;
 			children = (
+				C590444D2B3501880043BD0E /* Charts */,
 				C590444A2B34BF410043BD0E /* View */,
 				C590443B2B34A9140043BD0E /* Home */,
 				C59044272B34A8AA0043BD0E /* AppDelegate.swift */,
@@ -98,6 +116,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C590444D2B3501880043BD0E /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				C590444E2B3501A30043BD0E /* IntToMonth.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		EF33B20D9184D1E172454A9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDC505BA8891F52B9B88253F /* Pods-SDD-Case-3.debug.xcconfig */,
+				172978996DCD50CCE3789BE1 /* Pods-SDD-Case-3.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C59044382B34A8AB0043BD0E /* Build configuration list for PBXNativeTarget "SDD-Case-3" */;
 			buildPhases = (
+				176747F10D827782916B408D /* [CP] Check Pods Manifest.lock */,
 				C59044202B34A8AA0043BD0E /* Sources */,
 				C59044212B34A8AA0043BD0E /* Frameworks */,
 				C59044222B34A8AA0043BD0E /* Resources */,
+				84DD13C758912FBA8ADC57EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +200,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		176747F10D827782916B408D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDD-Case-3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84DD13C758912FBA8ADC57EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDD-Case-3/Pods-SDD-Case-3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDD-Case-3/Pods-SDD-Case-3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDD-Case-3/Pods-SDD-Case-3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C59044202B34A8AA0043BD0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -175,6 +254,7 @@
 				C59044472B34AAFE0043BD0E /* HomeProtocols.swift in Sources */,
 				C59044412B34AAEA0043BD0E /* HomePresenter.swift in Sources */,
 				C59044452B34AAF70043BD0E /* HomeRouter.swift in Sources */,
+				C590444F2B3501A30043BD0E /* IntToMonth.swift in Sources */,
 				C590443F2B34AACF0043BD0E /* HomeInteractor.swift in Sources */,
 				C590443D2B34A9220043BD0E /* HomeViewController.swift in Sources */,
 			);
@@ -315,12 +395,14 @@
 		};
 		C59044392B34A8AB0043BD0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDC505BA8891F52B9B88253F /* Pods-SDD-Case-3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KYR4X9M655;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SDD-Case-3/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -342,12 +424,14 @@
 		};
 		C590443A2B34A8AB0043BD0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172978996DCD50CCE3789BE1 /* Pods-SDD-Case-3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KYR4X9M655;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SDD-Case-3/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

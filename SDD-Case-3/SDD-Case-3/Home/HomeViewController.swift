@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import DGCharts
 
 class HomeViewController: UIViewController {
     var presenter: HomePresenterProtocol?
     var donutData: [DonutChartDataDetails] = []
+    var lineChartDataEntries: [ChartDataEntry] = []
     
-    lazy var lineChart: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "chart.xyaxis.line")
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    lazy var lineChartView: LineChartView = {
+        let chartView = LineChartView()
+        chartView.translatesAutoresizingMaskIntoConstraints = false
+        chartView.rightAxis.enabled = false
+        
+        let yAxis = chartView.leftAxis
+        yAxis.labelPosition = .outsideChart
+        
+        chartView.xAxis.labelPosition = .bottom
+        chartView.xAxis.setLabelCount(12, force: true)
+        chartView.xAxis.valueFormatter = IntToMonth()
+        
+        chartView.animate(xAxisDuration: 0.6)
+        return chartView
     }()
     
     lazy var transactionTableView: UITableView = {
@@ -42,18 +52,18 @@ class HomeViewController: UIViewController {
     
     private func setup() {
         view.backgroundColor = .white
-        view.addSubview(lineChart)
+        view.addSubview(lineChartView)
         view.addSubview(transactionTableView)
     }
     
     private func layout() {
         NSLayoutConstraint.activate([
-            lineChart.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            lineChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            lineChart.widthAnchor.constraint(equalToConstant: 200),
-            lineChart.heightAnchor.constraint(equalToConstant: 200),
+            lineChartView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lineChartView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            lineChartView.widthAnchor.constraint(equalToConstant: 324),
+            lineChartView.heightAnchor.constraint(equalToConstant: 200),
             
-            transactionTableView.topAnchor.constraint(equalTo: lineChart.bottomAnchor, constant: 16),
+            transactionTableView.topAnchor.constraint(equalTo: lineChartView.bottomAnchor, constant: 16),
             transactionTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             transactionTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             transactionTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -63,7 +73,24 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewProtocol {
     func displayData(donut: [DonutChartDataDetails], line: LineChartDataDetails) {
+        lineChartDataEntries.removeAll()
+        
+        for (idx, elmt) in line.month.enumerated() {
+            lineChartDataEntries.append(ChartDataEntry(x: Double(idx), y: Double(elmt)))
+        }
+        
         DispatchQueue.main.async {
+            let set = LineChartDataSet(entries: self.lineChartDataEntries, label: "Month")
+            set.mode = .cubicBezier
+            set.drawCirclesEnabled = false
+            set.lineWidth = 3
+            set.setColor(.systemBlue)
+            set.drawHorizontalHighlightIndicatorEnabled = false
+            
+            let data = LineChartData(dataSet: set)
+            data.setDrawValues(false)
+            self.lineChartView.data = data
+            
             self.donutData = donut
             self.transactionTableView.reloadData()
         }
