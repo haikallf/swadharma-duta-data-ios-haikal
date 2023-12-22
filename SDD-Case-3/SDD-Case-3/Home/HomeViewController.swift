@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     lazy var donutChartView: PieChartView = {
         let chartView = PieChartView()
         chartView.delegate = self
+        chartView.animate(xAxisDuration: 1.5, easingOption: .easeOutBack)
         chartView.translatesAutoresizingMaskIntoConstraints = false
         return chartView
     }()
@@ -97,7 +98,6 @@ extension HomeViewController: HomeViewProtocol {
             self.donutChartView.data = donutData
             
             self.donutData = donut
-            //            self.transactionTableView.reloadData()
         }
     }
 }
@@ -107,7 +107,7 @@ extension HomeViewController: ChartViewDelegate {
         if let dataSet = chartView.data?.dataSets[highlight.dataSetIndex] {
             let sliceIndex: Int = dataSet.entryIndex(entry: entry)
             presenter?.didClickeDonutChartItem(item: self.donutData[sliceIndex])
-            print( "Selected slice index: \(sliceIndex) \(self.donutData[sliceIndex].label)")
+            print( "Selected slice index: \(sliceIndex) \(self.donutData[sliceIndex].label ?? "")")
         }
     }
 }
