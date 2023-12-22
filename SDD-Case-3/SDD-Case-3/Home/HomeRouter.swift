@@ -26,7 +26,9 @@ class HomeRouter: HomeRouterProtocol {
         return view
     }
     
-    func navigateToDetail(from view: HomeViewProtocol?) {
-        
+    func navigateToDetail(from view: HomeViewProtocol?, with item: DonutChartDataDetails) {
+        guard let sourceView = view as? UIViewController else { return }
+        let historyModule = HistoryRouter.createModule(with: item)
+        sourceView.navigationController?.pushViewController(historyModule, animated: true)
     }
 }

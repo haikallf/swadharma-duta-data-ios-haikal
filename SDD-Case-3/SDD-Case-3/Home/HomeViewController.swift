@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     var presenter: HomePresenterProtocol?
     var donutData: [DonutChartDataDetails] = []
     var lineChartDataEntries: [ChartDataEntry] = []
+    var donutChartDataEntries: [PieChartDataEntry] = []
     
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
@@ -29,18 +30,11 @@ class HomeViewController: UIViewController {
         return chartView
     }()
     
-    lazy var transactionTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.separatorStyle = .singleLine
-        tableView.backgroundColor = .white
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.showsVerticalScrollIndicator = false
-        tableView.contentInset = UIEdgeInsets(top: -36, left: -16, bottom: 0, right: 0)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.automaticallyAdjustsScrollIndicatorInsets = false
-        return tableView
+    lazy var donutChartView: PieChartView = {
+        let chartView = PieChartView()
+        chartView.delegate = self
+        chartView.translatesAutoresizingMaskIntoConstraints = false
+        return chartView
     }()
     
     override func viewDidLoad() {
@@ -53,20 +47,20 @@ class HomeViewController: UIViewController {
     private func setup() {
         view.backgroundColor = .white
         view.addSubview(lineChartView)
-        view.addSubview(transactionTableView)
+        view.addSubview(donutChartView)
     }
     
     private func layout() {
         NSLayoutConstraint.activate([
-            lineChartView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             lineChartView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            lineChartView.widthAnchor.constraint(equalToConstant: 324),
+            lineChartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            lineChartView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             lineChartView.heightAnchor.constraint(equalToConstant: 200),
             
-            transactionTableView.topAnchor.constraint(equalTo: lineChartView.bottomAnchor, constant: 16),
-            transactionTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            transactionTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            transactionTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            donutChartView.topAnchor.constraint(equalTo: lineChartView.bottomAnchor, constant: 16),
+            donutChartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            donutChartView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            donutChartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 }
@@ -77,6 +71,10 @@ extension HomeViewController: HomeViewProtocol {
         
         for (idx, elmt) in line.month.enumerated() {
             lineChartDataEntries.append(ChartDataEntry(x: Double(idx), y: Double(elmt)))
+        }
+        
+        for (_, elmt) in donut.enumerated() {
+            donutChartDataEntries.append(PieChartDataEntry(value: Double(elmt.percentage ?? "0") ?? 0, label: elmt.label, data: elmt.data))
         }
         
         DispatchQueue.main.async {
@@ -91,32 +89,25 @@ extension HomeViewController: HomeViewProtocol {
             data.setDrawValues(false)
             self.lineChartView.data = data
             
+            let donutSet = PieChartDataSet(entries: self.donutChartDataEntries)
+            donutSet.colors = ChartColorTemplates.pastel()
+            donutSet.highlightEnabled = false
+            
+            let donutData = PieChartData(dataSet: donutSet)
+            self.donutChartView.data = donutData
+            
             self.donutData = donut
-            self.transactionTableView.reloadData()
+            //            self.transactionTableView.reloadData()
         }
     }
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        donutData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let transaction = donutData[indexPath.row]
-        
-        var content = cell.defaultContentConfiguration()
-        content.text = "\(transaction.percentage ?? "0")%"
-        content.secondaryText = "\(transaction.label ?? "Unknown Transaction")"
-        content.secondaryTextProperties.color = .gray
-        
-        cell.contentConfiguration = content
-        cell.backgroundColor = .clear
-        
-        let view = UIView()
-        view.backgroundColor = .clear
-        cell.selectedBackgroundView = view
-        return cell
+extension HomeViewController: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        if let dataSet = chartView.data?.dataSets[highlight.dataSetIndex] {
+            let sliceIndex: Int = dataSet.entryIndex(entry: entry)
+            presenter?.didClickeDonutChartItem(item: self.donutData[sliceIndex])
+            print( "Selected slice index: \(sliceIndex) \(self.donutData[sliceIndex].label)")
+        }
     }
 }

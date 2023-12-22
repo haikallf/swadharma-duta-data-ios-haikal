@@ -15,11 +15,15 @@
 		C590443D2B34A9220043BD0E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590443C2B34A9220043BD0E /* HomeViewController.swift */; };
 		C590443F2B34AACF0043BD0E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590443E2B34AACF0043BD0E /* HomeInteractor.swift */; };
 		C59044412B34AAEA0043BD0E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044402B34AAEA0043BD0E /* HomePresenter.swift */; };
-		C59044432B34AAF10043BD0E /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044422B34AAF10043BD0E /* HomeEntity.swift */; };
+		C59044432B34AAF10043BD0E /* ChartEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044422B34AAF10043BD0E /* ChartEntity.swift */; };
 		C59044452B34AAF70043BD0E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044442B34AAF70043BD0E /* HomeRouter.swift */; };
 		C59044472B34AAFE0043BD0E /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044462B34AAFE0043BD0E /* HomeProtocols.swift */; };
-		C590444C2B34BF770043BD0E /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590444B2B34BF770043BD0E /* DonutChartView.swift */; };
 		C590444F2B3501A30043BD0E /* IntToMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590444E2B3501A30043BD0E /* IntToMonth.swift */; };
+		C59044532B350A460043BD0E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044522B350A460043BD0E /* HistoryViewController.swift */; };
+		C59044552B350A500043BD0E /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044542B350A500043BD0E /* HistoryInteractor.swift */; };
+		C59044572B350A5C0043BD0E /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044562B350A5C0043BD0E /* HistoryPresenter.swift */; };
+		C590445B2B350A700043BD0E /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590445A2B350A700043BD0E /* HistoryRouter.swift */; };
+		C590445D2B350A790043BD0E /* HistoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590445C2B350A790043BD0E /* HistoryProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +39,15 @@
 		C590443C2B34A9220043BD0E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C590443E2B34AACF0043BD0E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		C59044402B34AAEA0043BD0E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		C59044422B34AAF10043BD0E /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		C59044422B34AAF10043BD0E /* ChartEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEntity.swift; sourceTree = "<group>"; };
 		C59044442B34AAF70043BD0E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		C59044462B34AAFE0043BD0E /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
-		C590444B2B34BF770043BD0E /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
 		C590444E2B3501A30043BD0E /* IntToMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntToMonth.swift; sourceTree = "<group>"; };
+		C59044522B350A460043BD0E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		C59044542B350A500043BD0E /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		C59044562B350A5C0043BD0E /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		C590445A2B350A700043BD0E /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		C590445C2B350A790043BD0E /* HistoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +91,9 @@
 		C59044262B34A8AA0043BD0E /* SDD-Case-3 */ = {
 			isa = PBXGroup;
 			children = (
-				C590444D2B3501880043BD0E /* Charts */,
-				C590444A2B34BF410043BD0E /* View */,
+				C590445E2B3512E80043BD0E /* Entity */,
+				C590444D2B3501880043BD0E /* Chart */,
+				C59044512B350A370043BD0E /* History */,
 				C590443B2B34A9140043BD0E /* Home */,
 				C59044272B34A8AA0043BD0E /* AppDelegate.swift */,
 				C59044292B34A8AA0043BD0E /* SceneDelegate.swift */,
@@ -101,27 +110,38 @@
 				C590443C2B34A9220043BD0E /* HomeViewController.swift */,
 				C590443E2B34AACF0043BD0E /* HomeInteractor.swift */,
 				C59044402B34AAEA0043BD0E /* HomePresenter.swift */,
-				C59044422B34AAF10043BD0E /* HomeEntity.swift */,
 				C59044442B34AAF70043BD0E /* HomeRouter.swift */,
 				C59044462B34AAFE0043BD0E /* HomeProtocols.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		C590444A2B34BF410043BD0E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C590444B2B34BF770043BD0E /* DonutChartView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C590444D2B3501880043BD0E /* Charts */ = {
+		C590444D2B3501880043BD0E /* Chart */ = {
 			isa = PBXGroup;
 			children = (
 				C590444E2B3501A30043BD0E /* IntToMonth.swift */,
 			);
-			path = Charts;
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		C59044512B350A370043BD0E /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C59044522B350A460043BD0E /* HistoryViewController.swift */,
+				C59044542B350A500043BD0E /* HistoryInteractor.swift */,
+				C59044562B350A5C0043BD0E /* HistoryPresenter.swift */,
+				C590445A2B350A700043BD0E /* HistoryRouter.swift */,
+				C590445C2B350A790043BD0E /* HistoryProtocols.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		C590445E2B3512E80043BD0E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C59044422B34AAF10043BD0E /* ChartEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		EF33B20D9184D1E172454A9B /* Pods */ = {
@@ -247,16 +267,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59044552B350A500043BD0E /* HistoryInteractor.swift in Sources */,
 				C59044282B34A8AA0043BD0E /* AppDelegate.swift in Sources */,
-				C59044432B34AAF10043BD0E /* HomeEntity.swift in Sources */,
-				C590444C2B34BF770043BD0E /* DonutChartView.swift in Sources */,
+				C59044432B34AAF10043BD0E /* ChartEntity.swift in Sources */,
 				C590442A2B34A8AA0043BD0E /* SceneDelegate.swift in Sources */,
+				C59044532B350A460043BD0E /* HistoryViewController.swift in Sources */,
+				C590445D2B350A790043BD0E /* HistoryProtocols.swift in Sources */,
 				C59044472B34AAFE0043BD0E /* HomeProtocols.swift in Sources */,
 				C59044412B34AAEA0043BD0E /* HomePresenter.swift in Sources */,
+				C59044572B350A5C0043BD0E /* HistoryPresenter.swift in Sources */,
 				C59044452B34AAF70043BD0E /* HomeRouter.swift in Sources */,
 				C590444F2B3501A30043BD0E /* IntToMonth.swift in Sources */,
 				C590443F2B34AACF0043BD0E /* HomeInteractor.swift in Sources */,
 				C590443D2B34A9220043BD0E /* HomeViewController.swift in Sources */,
+				C590445B2B350A700043BD0E /* HistoryRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

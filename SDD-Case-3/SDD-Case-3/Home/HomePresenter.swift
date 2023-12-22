@@ -32,5 +32,9 @@ class HomePresenter: HomePresenterProtocol {
         
         view?.displayData(donut: donutCharts, line: lineChart)
     }
+    
+    func didClickeDonutChartItem(item: DonutChartDataDetails) {
+        router?.navigateToDetail(from: view, with: item)
+    }
 }
 

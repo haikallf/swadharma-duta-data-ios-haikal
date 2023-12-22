@@ -11,7 +11,6 @@ protocol HomeViewProtocol: AnyObject {
     var presenter: HomePresenterProtocol? { get set }
     
     func displayData(donut: [DonutChartDataDetails], line: LineChartDataDetails)
-//    func displayTransactionHistory(_ transactions: [Transaction])
 }
 
 protocol HomeInteractorProtocol: AnyObject {
@@ -22,16 +21,13 @@ protocol HomePresenterProtocol: AnyObject {
     var view: HomeViewProtocol? { get set }
     var interactor: HomeInteractorProtocol? { get set }
     var router: HomeRouterProtocol? { get set }
-
-//    func showQRScan()
-//    func topUpBalance()
-//    func checkUserDefaultsKey()
-//    func fetchTransactionHistory()
+    
     func fetchAllData()
+    func didClickeDonutChartItem(item: DonutChartDataDetails)
 }
 
 protocol HomeRouterProtocol: AnyObject {
     static func createModule() -> UIViewController
-    func navigateToDetail(from view: HomeViewProtocol?)
+    func navigateToDetail(from view: HomeViewProtocol?, with item: DonutChartDataDetails)
 }
 
