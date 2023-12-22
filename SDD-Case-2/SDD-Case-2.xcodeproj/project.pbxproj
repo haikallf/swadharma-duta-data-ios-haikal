@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		C59044032B34A3690043BD0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044022B34A3690043BD0E /* AppDelegate.swift */; };
 		C59044052B34A3690043BD0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044042B34A3690043BD0E /* SceneDelegate.swift */; };
-		C59044072B34A3690043BD0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044062B34A3690043BD0E /* ViewController.swift */; };
 		C590440C2B34A36A0043BD0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C590440B2B34A36A0043BD0E /* Assets.xcassets */; };
 		C590440F2B34A36A0043BD0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C590440D2B34A36A0043BD0E /* LaunchScreen.storyboard */; };
 		C59044182B34A6870043BD0E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044172B34A6870043BD0E /* HomeViewController.swift */; };
 		C590441A2B34A6900043BD0E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044192B34A6900043BD0E /* HomeInteractor.swift */; };
+		C59044602B35223C0043BD0E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590445F2B35223C0043BD0E /* HomePresenter.swift */; };
+		C59044622B3522490043BD0E /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044612B3522490043BD0E /* HomeEntity.swift */; };
+		C59044642B35225D0043BD0E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044632B35225D0043BD0E /* HomeRouter.swift */; };
+		C59044662B3522650043BD0E /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59044652B3522650043BD0E /* HomeProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C59043FF2B34A3690043BD0E /* SDD-Case-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDD-Case-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59044022B34A3690043BD0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59044042B34A3690043BD0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C59044062B34A3690043BD0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C590440B2B34A36A0043BD0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C590440E2B34A36A0043BD0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C59044102B34A36A0043BD0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C59044172B34A6870043BD0E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C59044192B34A6900043BD0E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		C590445F2B35223C0043BD0E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		C59044612B3522490043BD0E /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		C59044632B35225D0043BD0E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		C59044652B3522650043BD0E /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,6 @@
 				C59044162B34A6770043BD0E /* Home */,
 				C59044022B34A3690043BD0E /* AppDelegate.swift */,
 				C59044042B34A3690043BD0E /* SceneDelegate.swift */,
-				C59044062B34A3690043BD0E /* ViewController.swift */,
 				C590440B2B34A36A0043BD0E /* Assets.xcassets */,
 				C590440D2B34A36A0043BD0E /* LaunchScreen.storyboard */,
 				C59044102B34A36A0043BD0E /* Info.plist */,
@@ -74,6 +79,10 @@
 			children = (
 				C59044172B34A6870043BD0E /* HomeViewController.swift */,
 				C59044192B34A6900043BD0E /* HomeInteractor.swift */,
+				C590445F2B35223C0043BD0E /* HomePresenter.swift */,
+				C59044612B3522490043BD0E /* HomeEntity.swift */,
+				C59044632B35225D0043BD0E /* HomeRouter.swift */,
+				C59044652B3522650043BD0E /* HomeProtocols.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,10 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C59044072B34A3690043BD0E /* ViewController.swift in Sources */,
 				C59044032B34A3690043BD0E /* AppDelegate.swift in Sources */,
+				C59044622B3522490043BD0E /* HomeEntity.swift in Sources */,
+				C59044642B35225D0043BD0E /* HomeRouter.swift in Sources */,
 				C59044052B34A3690043BD0E /* SceneDelegate.swift in Sources */,
+				C59044662B3522650043BD0E /* HomeProtocols.swift in Sources */,
 				C590441A2B34A6900043BD0E /* HomeInteractor.swift in Sources */,
+				C59044602B35223C0043BD0E /* HomePresenter.swift in Sources */,
 				C59044182B34A6870043BD0E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
