@@ -52,45 +52,45 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification) async
     -> UNNotificationPresentationOptions {
-        let userInfo = notification.request.content.userInfo
+        _ = notification.request.content.userInfo
         
-        // With swizzling disabled you must let Messaging know about the message, for Analytics
-        // Messaging.messaging().appDidReceiveMessage(userInfo)
-        
-        // ...
-        
-        // Print full message.
-        print(userInfo)
-        
-        handleNotification(userInfo: userInfo)
-        
-        // Change this to your preferred presentation option
         return [[.alert, .sound]]
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse) async {
         let userInfo = response.notification.request.content.userInfo
-        
-        // ...
-        
-        // With swizzling disabled you must let Messaging know about the message, for Analytics
-        // Messaging.messaging().appDidReceiveMessage(userInfo)
-        
-        // Print full message.
-        print(userInfo)
+        print("HEHEH\(response)")
+        handleNotification(userInfo: userInfo)
     }
     
     func handleNotification(userInfo: [AnyHashable: Any]) {
-        print("Received notification: \(userInfo)")
-        
-        if let deepLinkString = userInfo["deepLink"] as? String, let deepLinkURL = URL(string: deepLinkString) {
-            // Handle the deep link URL (e.g., navigate to a specific screen)
-            print("Deep Link: \(deepLinkURL)")
-            
-            // Add your custom logic here based on the deep link
+        if let deepLinkString = userInfo["deepLink"] as? String {
+            print("Received notification: \(deepLinkString)")
+
+            if let deepLinkURL = URL(string: deepLinkString) {
+                print("Deep Link: \(deepLinkURL)")
+
+                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                    let rootViewController = sceneDelegate.window?.rootViewController
+
+                    if let navigationController = rootViewController as? UINavigationController {
+                        let viewControllerToPush: UIViewController = DeepLinkRouter.createModule(with: deepLinkURL)
+                        navigationController.pushViewController(viewControllerToPush, animated: true)
+                    } else {
+                        let viewControllerToPresent: UIViewController = DeepLinkRouter.createModule(with: deepLinkURL)
+                        rootViewController?.present(viewControllerToPresent, animated: true, completion: nil)
+                    }
+                }
+            } else {
+                print("Error: Unable to create URL from 'deepLink' string.")
+            }
+        } else {
+            print("Error: Missing or invalid 'deepLink' in notification payload.")
         }
     }
+
+
     
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async
@@ -107,9 +107,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             print("Message ID: \(messageID)")
         }
         
-        // Print full message.
-        print(userInfo)
-        
         return UIBackgroundFetchResult.newData
     }
     
@@ -121,7 +118,7 @@ extension AppDelegate: MessagingDelegate {
             UserDefaults.standard.set(token, forKey: "fcmToken")
         }
         
-        print("Firebase registration token: \(fcmToken)")
+        print("Firebase registration token: \(fcmToken ?? "No Token")")
         
         let dataDict: [String: String] = ["token": fcmToken ?? ""]
         NotificationCenter.default.post(

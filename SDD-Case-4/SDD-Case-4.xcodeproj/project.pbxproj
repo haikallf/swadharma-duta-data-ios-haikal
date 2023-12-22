@@ -9,24 +9,50 @@
 /* Begin PBXBuildFile section */
 		C546493D2B35361E0040AD86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546493C2B35361E0040AD86 /* AppDelegate.swift */; };
 		C546493F2B35361E0040AD86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546493E2B35361E0040AD86 /* SceneDelegate.swift */; };
-		C54649412B35361E0040AD86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54649402B35361E0040AD86 /* ViewController.swift */; };
 		C54649462B35361F0040AD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54649452B35361F0040AD86 /* Assets.xcassets */; };
 		C54649492B35361F0040AD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54649472B35361F0040AD86 /* LaunchScreen.storyboard */; };
 		C54649512B35367D0040AD86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C54649502B35367D0040AD86 /* GoogleService-Info.plist */; };
 		C5C7DF842B3537AE0000DC75 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C5C7DF832B3537AE0000DC75 /* FirebaseAnalytics */; };
 		C5C7DF862B3537AE0000DC75 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C5C7DF852B3537AE0000DC75 /* FirebaseMessaging */; };
+		C5C7DF8A2B3554FB0000DC75 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF892B3554FB0000DC75 /* HomeViewController.swift */; };
+		C5C7DF8C2B3555060000DC75 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF8B2B3555060000DC75 /* HomeInteractor.swift */; };
+		C5C7DF8E2B3555100000DC75 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF8D2B3555100000DC75 /* HomePresenter.swift */; };
+		C5C7DF902B35552A0000DC75 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF8F2B35552A0000DC75 /* HomeEntity.swift */; };
+		C5C7DF922B3555390000DC75 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF912B3555390000DC75 /* HomeRouter.swift */; };
+		C5C7DF942B3555420000DC75 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF932B3555420000DC75 /* HomeProtocols.swift */; };
+		C5C7DF972B3557B90000DC75 /* DeepLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF962B3557B90000DC75 /* DeepLinkViewController.swift */; };
+		C5C7DF992B3557C40000DC75 /* DeepLinkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF982B3557C40000DC75 /* DeepLinkInteractor.swift */; };
+		C5C7DF9B2B3557D90000DC75 /* DeepLinkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF9A2B3557D90000DC75 /* DeepLinkPresenter.swift */; };
+		C5C7DF9D2B3557E40000DC75 /* DeepLinkEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF9C2B3557E40000DC75 /* DeepLinkEntity.swift */; };
+		C5C7DF9F2B3557EE0000DC75 /* DeepLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DF9E2B3557EE0000DC75 /* DeepLinkRouter.swift */; };
+		C5C7DFA12B3557F70000DC75 /* DeepLinkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DFA02B3557F60000DC75 /* DeepLinkProtocols.swift */; };
+		C5C7DFA42B356C990000DC75 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DFA32B356C990000DC75 /* URL.swift */; };
+		C5C7DFA82B35746E0000DC75 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DFA72B35746E0000DC75 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C54649392B35361E0040AD86 /* SDD-Case-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDD-Case-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C546493C2B35361E0040AD86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C546493E2B35361E0040AD86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C54649402B35361E0040AD86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C54649452B35361F0040AD86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C54649482B35361F0040AD86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C546494A2B35361F0040AD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54649502B35367D0040AD86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5C7DF872B353F910000DC75 /* SDD-Case-4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SDD-Case-4.entitlements"; sourceTree = "<group>"; };
+		C5C7DF892B3554FB0000DC75 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C5C7DF8B2B3555060000DC75 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		C5C7DF8D2B3555100000DC75 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		C5C7DF8F2B35552A0000DC75 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		C5C7DF912B3555390000DC75 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		C5C7DF932B3555420000DC75 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		C5C7DF962B3557B90000DC75 /* DeepLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkViewController.swift; sourceTree = "<group>"; };
+		C5C7DF982B3557C40000DC75 /* DeepLinkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkInteractor.swift; sourceTree = "<group>"; };
+		C5C7DF9A2B3557D90000DC75 /* DeepLinkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkPresenter.swift; sourceTree = "<group>"; };
+		C5C7DF9C2B3557E40000DC75 /* DeepLinkEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkEntity.swift; sourceTree = "<group>"; };
+		C5C7DF9E2B3557EE0000DC75 /* DeepLinkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkRouter.swift; sourceTree = "<group>"; };
+		C5C7DFA02B3557F60000DC75 /* DeepLinkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkProtocols.swift; sourceTree = "<group>"; };
+		C5C7DFA32B356C990000DC75 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		C5C7DFA72B35746E0000DC75 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +87,53 @@
 		C546493B2B35361E0040AD86 /* SDD-Case-4 */ = {
 			isa = PBXGroup;
 			children = (
+				C5C7DFA22B356C910000DC75 /* Helper */,
+				C5C7DF952B3557AB0000DC75 /* DeepLink */,
+				C5C7DF882B3554E20000DC75 /* Home */,
 				C5C7DF872B353F910000DC75 /* SDD-Case-4.entitlements */,
 				C546493C2B35361E0040AD86 /* AppDelegate.swift */,
 				C546493E2B35361E0040AD86 /* SceneDelegate.swift */,
-				C54649402B35361E0040AD86 /* ViewController.swift */,
 				C54649452B35361F0040AD86 /* Assets.xcassets */,
 				C54649472B35361F0040AD86 /* LaunchScreen.storyboard */,
 				C546494A2B35361F0040AD86 /* Info.plist */,
 				C54649502B35367D0040AD86 /* GoogleService-Info.plist */,
 			);
 			path = "SDD-Case-4";
+			sourceTree = "<group>";
+		};
+		C5C7DF882B3554E20000DC75 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C5C7DF892B3554FB0000DC75 /* HomeViewController.swift */,
+				C5C7DF8B2B3555060000DC75 /* HomeInteractor.swift */,
+				C5C7DF8D2B3555100000DC75 /* HomePresenter.swift */,
+				C5C7DF8F2B35552A0000DC75 /* HomeEntity.swift */,
+				C5C7DF912B3555390000DC75 /* HomeRouter.swift */,
+				C5C7DF932B3555420000DC75 /* HomeProtocols.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C5C7DF952B3557AB0000DC75 /* DeepLink */ = {
+			isa = PBXGroup;
+			children = (
+				C5C7DF962B3557B90000DC75 /* DeepLinkViewController.swift */,
+				C5C7DF982B3557C40000DC75 /* DeepLinkInteractor.swift */,
+				C5C7DF9A2B3557D90000DC75 /* DeepLinkPresenter.swift */,
+				C5C7DF9C2B3557E40000DC75 /* DeepLinkEntity.swift */,
+				C5C7DF9E2B3557EE0000DC75 /* DeepLinkRouter.swift */,
+				C5C7DFA02B3557F60000DC75 /* DeepLinkProtocols.swift */,
+			);
+			path = DeepLink;
+			sourceTree = "<group>";
+		};
+		C5C7DFA22B356C910000DC75 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C5C7DFA32B356C990000DC75 /* URL.swift */,
+				C5C7DFA72B35746E0000DC75 /* UIView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +214,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54649412B35361E0040AD86 /* ViewController.swift in Sources */,
+				C5C7DFA82B35746E0000DC75 /* UIView.swift in Sources */,
+				C5C7DF972B3557B90000DC75 /* DeepLinkViewController.swift in Sources */,
 				C546493D2B35361E0040AD86 /* AppDelegate.swift in Sources */,
+				C5C7DF992B3557C40000DC75 /* DeepLinkInteractor.swift in Sources */,
+				C5C7DF902B35552A0000DC75 /* HomeEntity.swift in Sources */,
+				C5C7DF9D2B3557E40000DC75 /* DeepLinkEntity.swift in Sources */,
+				C5C7DFA42B356C990000DC75 /* URL.swift in Sources */,
 				C546493F2B35361E0040AD86 /* SceneDelegate.swift in Sources */,
+				C5C7DF9B2B3557D90000DC75 /* DeepLinkPresenter.swift in Sources */,
+				C5C7DF942B3555420000DC75 /* HomeProtocols.swift in Sources */,
+				C5C7DF8E2B3555100000DC75 /* HomePresenter.swift in Sources */,
+				C5C7DF9F2B3557EE0000DC75 /* DeepLinkRouter.swift in Sources */,
+				C5C7DF922B3555390000DC75 /* HomeRouter.swift in Sources */,
+				C5C7DFA12B3557F70000DC75 /* DeepLinkProtocols.swift in Sources */,
+				C5C7DF8C2B3555060000DC75 /* HomeInteractor.swift in Sources */,
+				C5C7DF8A2B3554FB0000DC75 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
