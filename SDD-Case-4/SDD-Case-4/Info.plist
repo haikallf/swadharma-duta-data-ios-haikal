@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Server Key</key>
+	<string>AAAAR-N_4Wg:APA91bFS81RpYNvgwn3cjCz3qRmH6yECe5vxp87_KAxKIXhRJlCoQ3WwK5Qa5rksutHk4k5uiYJjAI6EWLFbhGBTVc-0xeCyse_SOJmbLGVRFTZa3c1ZvW6hEcuGbF_t3hSW85Y4SweD</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

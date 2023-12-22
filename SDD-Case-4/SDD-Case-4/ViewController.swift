@@ -45,11 +45,12 @@ class ViewController: UIViewController {
         // Use your server or a cloud function to send the payload to Firebase
         // You can use a networking library or URLSession to make a POST request to the FCM endpoint
         // Replace "<Your FCM Server Key>" with your actual FCM Server Key
+        guard let serverKey = Bundle.main.object(forInfoDictionaryKey: "Server Key") else { return }
         let fcmUrl = URL(string: "https://fcm.googleapis.com/fcm/send")!
         var request = URLRequest(url: fcmUrl)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("key=AAAAR-N_4Wg:APA91bFS81RpYNvgwn3cjCz3qRmH6yECe5vxp87_KAxKIXhRJlCoQ3WwK5Qa5rksutHk4k5uiYJjAI6EWLFbhGBTVc-0xeCyse_SOJmbLGVRFTZa3c1ZvW6hEcuGbF_t3hSW85Y4SweD", forHTTPHeaderField: "Authorization")
+        request.setValue("key=\(serverKey)", forHTTPHeaderField: "Authorization")
         request.httpBody = data
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
