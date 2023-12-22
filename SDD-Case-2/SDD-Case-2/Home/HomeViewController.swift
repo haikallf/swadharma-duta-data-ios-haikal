@@ -79,10 +79,14 @@ extension HomeViewController: HomeViewProtocol, UITableViewDelegate, UITableView
         var content = cell.defaultContentConfiguration()
         content.text = user.name
         content.secondaryText = user.email
+        content.secondaryTextProperties.color = .gray
+        
+        let view = UIView()
+        view.backgroundColor = .clear
+        cell.selectedBackgroundView = view
         
         cell.contentConfiguration = content
-        
-        cell.backgroundColor = .white
+        cell.backgroundColor = .clear
         return cell
     }
 }
