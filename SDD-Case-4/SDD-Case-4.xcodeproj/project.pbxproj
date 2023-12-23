@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763849C89FA581AF8E164BC4 /* Pods_SDD_Case_4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580BE39F758815B264DE30DF /* Pods_SDD_Case_4.framework */; };
 		C546493D2B35361E0040AD86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546493C2B35361E0040AD86 /* AppDelegate.swift */; };
 		C546493F2B35361E0040AD86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546493E2B35361E0040AD86 /* SceneDelegate.swift */; };
 		C54649462B35361F0040AD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54649452B35361F0040AD86 /* Assets.xcassets */; };
@@ -28,9 +29,22 @@
 		C5C7DFA12B3557F70000DC75 /* DeepLinkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DFA02B3557F60000DC75 /* DeepLinkProtocols.swift */; };
 		C5C7DFA42B356C990000DC75 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DFA32B356C990000DC75 /* URL.swift */; };
 		C5C7DFA82B35746E0000DC75 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7DFA72B35746E0000DC75 /* UIView.swift */; };
+		C5C7E76E2B3763980068AE27 /* SDD_Case_4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7E76D2B3763980068AE27 /* SDD_Case_4Tests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C5C7E76F2B3763980068AE27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54649312B35361E0040AD86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C54649382B35361E0040AD86;
+			remoteInfo = "SDD-Case-4";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		33E0CCD5BD4811FC6B21EE25 /* Pods-SDD-Case-4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDD-Case-4.debug.xcconfig"; path = "Target Support Files/Pods-SDD-Case-4/Pods-SDD-Case-4.debug.xcconfig"; sourceTree = "<group>"; };
+		580BE39F758815B264DE30DF /* Pods_SDD_Case_4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDD_Case_4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54649392B35361E0040AD86 /* SDD-Case-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDD-Case-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C546493C2B35361E0040AD86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C546493E2B35361E0040AD86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +67,9 @@
 		C5C7DFA02B3557F60000DC75 /* DeepLinkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkProtocols.swift; sourceTree = "<group>"; };
 		C5C7DFA32B356C990000DC75 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		C5C7DFA72B35746E0000DC75 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C5C7E76B2B3763980068AE27 /* SDD-Case-4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SDD-Case-4Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C7E76D2B3763980068AE27 /* SDD_Case_4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDD_Case_4Tests.swift; sourceTree = "<group>"; };
+		DA93C598ADF6DE446C966233 /* Pods-SDD-Case-4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDD-Case-4.release.xcconfig"; path = "Target Support Files/Pods-SDD-Case-4/Pods-SDD-Case-4.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,17 +79,45 @@
 			files = (
 				C5C7DF862B3537AE0000DC75 /* FirebaseMessaging in Frameworks */,
 				C5C7DF842B3537AE0000DC75 /* FirebaseAnalytics in Frameworks */,
+				763849C89FA581AF8E164BC4 /* Pods_SDD_Case_4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5C7E7682B3763980068AE27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FEAFB21752070EB85EB3D56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				580BE39F758815B264DE30DF /* Pods_SDD_Case_4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B08700B34B16B669B11E181D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33E0CCD5BD4811FC6B21EE25 /* Pods-SDD-Case-4.debug.xcconfig */,
+				DA93C598ADF6DE446C966233 /* Pods-SDD-Case-4.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C54649302B35361E0040AD86 = {
 			isa = PBXGroup;
 			children = (
 				C546493B2B35361E0040AD86 /* SDD-Case-4 */,
+				C5C7E76C2B3763980068AE27 /* SDD-Case-4Tests */,
 				C546493A2B35361E0040AD86 /* Products */,
+				B08700B34B16B669B11E181D /* Pods */,
+				8FEAFB21752070EB85EB3D56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C54649392B35361E0040AD86 /* SDD-Case-4.app */,
+				C5C7E76B2B3763980068AE27 /* SDD-Case-4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +182,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		C5C7E76C2B3763980068AE27 /* SDD-Case-4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C5C7E76D2B3763980068AE27 /* SDD_Case_4Tests.swift */,
+			);
+			path = "SDD-Case-4Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C546494D2B35361F0040AD86 /* Build configuration list for PBXNativeTarget "SDD-Case-4" */;
 			buildPhases = (
+				74F90834484BE7E4C1F197AA /* [CP] Check Pods Manifest.lock */,
 				C54649352B35361E0040AD86 /* Sources */,
 				C54649362B35361E0040AD86 /* Frameworks */,
 				C54649372B35361E0040AD86 /* Resources */,
@@ -160,6 +215,24 @@
 			productReference = C54649392B35361E0040AD86 /* SDD-Case-4.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C5C7E76A2B3763980068AE27 /* SDD-Case-4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5C7E7732B3763980068AE27 /* Build configuration list for PBXNativeTarget "SDD-Case-4Tests" */;
+			buildPhases = (
+				C5C7E7672B3763980068AE27 /* Sources */,
+				C5C7E7682B3763980068AE27 /* Frameworks */,
+				C5C7E7692B3763980068AE27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5C7E7702B3763980068AE27 /* PBXTargetDependency */,
+			);
+			name = "SDD-Case-4Tests";
+			productName = "SDD-Case-4Tests";
+			productReference = C5C7E76B2B3763980068AE27 /* SDD-Case-4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +245,10 @@
 				TargetAttributes = {
 					C54649382B35361E0040AD86 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					C5C7E76A2B3763980068AE27 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C54649382B35361E0040AD86;
 					};
 				};
 			};
@@ -192,6 +269,7 @@
 			projectRoot = "";
 			targets = (
 				C54649382B35361E0040AD86 /* SDD-Case-4 */,
+				C5C7E76A2B3763980068AE27 /* SDD-Case-4Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -207,7 +285,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5C7E7692B3763980068AE27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74F90834484BE7E4C1F197AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDD-Case-4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C54649352B35361E0040AD86 /* Sources */ = {
@@ -233,7 +343,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5C7E7672B3763980068AE27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5C7E76E2B3763980068AE27 /* SDD_Case_4Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5C7E7702B3763980068AE27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C54649382B35361E0040AD86 /* SDD-Case-4 */;
+			targetProxy = C5C7E76F2B3763980068AE27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C54649472B35361F0040AD86 /* LaunchScreen.storyboard */ = {
@@ -368,6 +494,7 @@
 		};
 		C546494E2B35361F0040AD86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E0CCD5BD4811FC6B21EE25 /* Pods-SDD-Case-4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -396,6 +523,7 @@
 		};
 		C546494F2B35361F0040AD86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA93C598ADF6DE446C966233 /* Pods-SDD-Case-4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,6 +550,42 @@
 			};
 			name = Release;
 		};
+		C5C7E7712B3763980068AE27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYR4X9M655;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haikallazuardifadil.SDD-Case-4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDD-Case-4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SDD-Case-4";
+			};
+			name = Debug;
+		};
+		C5C7E7722B3763980068AE27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYR4X9M655;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haikallazuardifadil.SDD-Case-4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDD-Case-4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SDD-Case-4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +603,15 @@
 			buildConfigurations = (
 				C546494E2B35361F0040AD86 /* Debug */,
 				C546494F2B35361F0040AD86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5C7E7732B3763980068AE27 /* Build configuration list for PBXNativeTarget "SDD-Case-4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5C7E7712B3763980068AE27 /* Debug */,
+				C5C7E7722B3763980068AE27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
