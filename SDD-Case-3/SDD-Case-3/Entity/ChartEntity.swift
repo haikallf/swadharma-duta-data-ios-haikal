@@ -29,6 +29,13 @@ struct DonutChartDataDetails {
     }
 }
 
+extension DonutChartDataDetails: Equatable {
+    static func == (lhs: DonutChartDataDetails, rhs: DonutChartDataDetails) -> Bool {
+        return lhs.label == rhs.label && lhs.percentage == rhs.percentage
+    }
+}
+
+
 struct LineChartDataDetails {
     let month: [Int]
 }
@@ -39,7 +46,6 @@ struct ChartDataPoint {
 }
 
 extension Array where Element == ChartData {
-    
     static func dummyData() -> [ChartData] {
         return [
             ChartData(type: "donutChart", data: .donut([

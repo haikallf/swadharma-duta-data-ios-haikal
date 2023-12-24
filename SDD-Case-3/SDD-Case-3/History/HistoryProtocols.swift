@@ -21,10 +21,6 @@ protocol HistoryPresenterProtocol: AnyObject {
     var router: HistoryRouterProtocol? { get set }
 
     var selectedHistory: DonutChartDataDetails? { get set }
-//    func showQRScan()
-//    func topUpBalance()
-//    func checkUserDefaultsKey()
-//    func fetchTransactionHistory()
 }
 
 protocol HistoryRouterProtocol: AnyObject {
